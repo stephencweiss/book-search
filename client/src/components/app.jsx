@@ -29,9 +29,9 @@ class App extends Component {
     axios.get(`https://www.googleapis.com/books/v1/volumes`, {
       params: {
         q: query,
-        key: BOOKS_API_KEY,
         startIndex,
-        maxResults
+        maxResults,
+        key: BOOKS_API_KEY,
       }
     })
       .then(response => this.setState({ books: response.data.items, query }))
