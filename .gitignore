@@ -1,3 +1,6 @@
 node_modules
-dist/bundle
+client/dist/bundle.js
 src/config/bookapi.js
+npm-debug.log
+.DS_Store
+/*.env
