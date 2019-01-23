@@ -17,7 +17,11 @@ class BookSearch extends Component {
     this.setState({ [stateName]: stateValue });
   }
 
-  handleSubmit() {};
+  handleSubmit(event) {
+    const data = this.state.bookQuery;
+    this.props.searchGoogleBooks(data);
+    event.preventDefault();
+  };
 
   render() {
     const { bookQuery } = this.state
@@ -33,15 +37,19 @@ class BookSearch extends Component {
             placeholder={ 'Search for a book' }
             >
           </input>
+          <button
+            className="book-query-submission"
+            onClick={ this.handleSubmit }>
+            Submit
+          </button>
         </form>
-        <button className="book-query-submission" onClick={ this.handleSubmit }>Submit</button>
       </div>
     )
   };
 }
 
 BookSearch.propTypes = {
-  onSubmit: PropTypes.func
+  searchGoogleBooks: PropTypes.func,
 };
 
 export default BookSearch;
