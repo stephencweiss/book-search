@@ -11,7 +11,6 @@ class BookList extends Component {
   };
 
   updateSearch(e) {
-    console.log(`this is --> `, e.target);
     this.props.updateSearchWithPage(e.target.dataset.direction);
   }
 

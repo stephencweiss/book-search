@@ -20,7 +20,6 @@ class App extends Component {
 
   updateSearchWithPage (direction) {
     let { pageNum, query } = this.state;
-    console.log(`the direction is --> `, direction);
     pageNum = direction === 'up' ? this.state.pageNum + 1 : Math.max( this.state.pageNum - 1, 0);
     this.searchGoogleBooks (query, pageNum);
   }
