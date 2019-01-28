@@ -1,6 +1,7 @@
 node_modules
-client/dist/bundle.js
 src/config/bookapi.js
 npm-debug.log
 .DS_Store
 /*.env
+
+# client/dist/bundle.js # removing for Heroku deployment.
